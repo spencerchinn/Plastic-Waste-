@@ -1,0 +1,36 @@
+---
+title: "Project Checkpoint 1"
+author: Spencer Chinn
+format: html
+editor: visual
+---
+
+## Data Context
+
+This dataset focuses on plastic pollution, specifically tracking plastic waste collected from different locations and environments.
+
+The dataset includes information on types of plastic items, counts of collected debris, and country or region. The dataset was created from environmental cleanup efforts and reserach organizations working to monitor plastic waste.
+
+## Data Cleaning
+
+The data was cleaned by combining datasets from 2019 and 2020, adding the year variable, and standardizing the column names.
+
+## Research Questions with Current Data
+
+-   Which parent companies contribute the most total plastic waste across all countries ?
+-   How does the amount of plastic pollution compare across countries by year ?
+
+## Research Questions with Supplemental Data
+
+-   How does plastic waste vary with population size ?
+-   How does plastic pollution from different companies relate to their yearly revenue ?
+
+# Illustrations
+
+-   Which parent companies contribute the most total plastic waste across all countries ?
+
+![](sketch1.png){width="561"}
+
+-   How does the amount of plastic pollution compare across countries by year ?
+
+![](sketch2.png){width="529"}
