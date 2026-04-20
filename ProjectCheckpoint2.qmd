@@ -1,0 +1,38 @@
+---
+title: "Project Checkpoint 2"
+format: html
+editor: visual
+---
+
+## Data Summary 1
+
+Which parent companies contribute the most total plastic waste across all countries, and what share of the total recorded waste does each company account for?
+
+## Importing Dataset
+
+```{r}
+plastics <- read.csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
+
+```
+
+```{r}
+
+overall_total <- sum(plastics$grand_total, na.rm = TRUE)
+
+company_share <- function(x, overall_total) {
+  sum(x, na.rm = TRUE) / overall_total
+}
+
+summary <- plastics |>
+  group_by(parent_company) |> 
+  summarize(
+    total_plastic_waste = sum(grand_total, na.rm = TRUE),
+    share_of_total = company_share(grand_total, overall_total),
+    .groups = "drop"
+  ) |>
+  arrange(desc(total_plastic_waste))
+
+summary
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
